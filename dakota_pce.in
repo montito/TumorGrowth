@@ -1,0 +1,47 @@
+
+strategy,
+	single_method #graphics
+
+method,
+	polynomial_chaos
+	  quadrature_order   = 5	
+	  dimension_preference = 8 27	
+	  samples = 10000		
+	  seed = 12347 rng rnum2	
+	  response_levels =		
+	  .1 1. 50. 100. 500. 1000.	
+	  variance_based_decomp #univariate_effects
+
+# comment out
+# variables,
+# 	uniform_uncertain = 2			
+#       	  lower_bounds      = -2.  -2. 		
+# 	  upper_bounds      =  2.   2.		
+# 	  descriptors       = 'x1' 'x2'		
+
+variables,
+        normal_uncertain    =  1
+          means             =  1.0
+          std_deviations    =  1.0
+          descriptors       =  'proliferation'
+        lognormal_uncertain =  1
+          means             =  2.0
+          std_deviations    =  0.5
+          descriptors       =  'apoptosis'
+        uncertain_correlation_matrix =  1.0 0.2
+                                        0.2 1.0
+
+
+interface,
+	system 
+	analysis_driver = '/workarea/fuentes/github/TumorGrowth/lonestar_setup_driver'
+	parameters_file = 'pce.in'
+	results_file = 'pce.out'
+        work_directory named = "realization"
+	file_tag   file_save directory_save 
+
+responses,
+	response_functions = 1
+	no_gradients
+	no_hessians
+
