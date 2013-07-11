@@ -1,0 +1,514 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Usage:
+	 ./example-opt -init_timestep 0
+OR
+	 ./example-opt -read_solution -init_timestep 26
+
+Running: ./example-opt -run_fem pce.in.6 -init_timestep 0 -output_freq 100 -n_timesteps 100 -ksp_type gmres -pc_type bjacobi -sub_pc_type ilu -sub_pc_factor_levels 4
+
+ Mesh Information:
+  mesh_dimension()=2
+  spatial_dimension()=3
+  n_nodes()=160801
+    n_local_nodes()=10251
+  n_elem()=160000
+    n_local_elem()=9996
+    n_active_elem()=160000
+  n_subdomains()=1
+  n_partitions()=16
+  n_processors()=16
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=2
+   System #0, "Gradient"
+    Type "TransientLinearImplicit"
+    Variables={ "gx" "gy" } 
+    Finite Element Types="LAGRANGE" 
+    Approximation Orders="FIRST" 
+    n_dofs()=321602
+    n_local_dofs()=20502
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=3
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 17.8396
+      Average Off-Processor Bandwidth <= 0.21174
+      Maximum  On-Processor Bandwidth <= 22
+      Maximum Off-Processor Bandwidth <= 14
+    DofMap Constraints
+      Number of DoF Constraints = 0
+   System #1, "Ten-species"
+    Type "TransientLinearImplicit"
+    Variables={ "tumor" "chemical_tumor" "hypoxic" "necrotic" "nutrient" "taf" "vessel" "chemical_vessel" } 
+    Finite Element Types="LAGRANGE" 
+    Approximation Orders="FIRST" 
+    n_dofs()=1286408
+    n_local_dofs()=82008
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=3
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 71.3583
+      Average Off-Processor Bandwidth <= 0.84696
+      Maximum  On-Processor Bandwidth <= 88
+      Maximum Off-Processor Bandwidth <= 56
+    DofMap Constraints
+      Number of DoF Constraints = 0
+
+                                          2 variables
+                      9.436491673103709e-01 LAMBDA_P
+                      2.000000000000000e-01 LAMBDA_A
+                                          1 functions
+                                          1 ASV_1:response_fn_1
+                                          0 derivative_variables
+                                          0 analysis_components
+
+file number = 6
+
+Solving time step: 1, time: 0.01
+Linear solver converged at step: 18, final residual: 0.000447039  Nonlinear convergence: ||u - u_old|| = 1.16446
+Linear solver converged at step: 15, final residual: 0.000706494  Nonlinear convergence: ||u - u_old|| = 1.16494
+Linear solver converged at step: 13, final residual: 0.000660317  Nonlinear convergence: ||u - u_old|| = 0.349962
+Linear solver converged at step: 12, final residual: 0.000675105  Nonlinear convergence: ||u - u_old|| = 0.302886
+Linear solver converged at step: 11, final residual: 0.000567716  Nonlinear convergence: ||u - u_old|| = 0.176044
+Linear solver converged at step: 8, final residual: 0.000617546  Nonlinear convergence: ||u - u_old|| = 0.0835755
+Linear solver converged at step: 6, final residual: 0.000599751  Nonlinear convergence: ||u - u_old|| = 0.0310206
+Linear solver converged at step: 3, final residual: 0.000698194  Nonlinear convergence: ||u - u_old|| = 0.0105274
+Linear solver converged at step: 3, final residual: 0.000583816  Nonlinear convergence: ||u - u_old|| = 0.00394184
+Nonlinear solver converged at step 8
+
+Solving time step: 2, time: 0.02
+Linear solver converged at step: 11, final residual: 0.000650432  Nonlinear convergence: ||u - u_old|| = 0.0627471
+Linear solver converged at step: 10, final residual: 0.00070693  Nonlinear convergence: ||u - u_old|| = 0.0859374
+Linear solver converged at step: 7, final residual: 0.000534951  Nonlinear convergence: ||u - u_old|| = 0.0444797
+Linear solver converged at step: 4, final residual: 0.000560986  Nonlinear convergence: ||u - u_old|| = 0.0170663
+Linear solver converged at step: 3, final residual: 0.000604766  Nonlinear convergence: ||u - u_old|| = 0.00553808
+Nonlinear solver converged at step 4
+
+Solving time step: 3, time: 0.03
+Linear solver converged at step: 10, final residual: 0.000634825  Nonlinear convergence: ||u - u_old|| = 0.0438732
+Linear solver converged at step: 8, final residual: 0.000669381  Nonlinear convergence: ||u - u_old|| = 0.0491496
+Linear solver converged at step: 5, final residual: 0.000606094  Nonlinear convergence: ||u - u_old|| = 0.0215256
+Linear solver converged at step: 3, final residual: 0.000594507  Nonlinear convergence: ||u - u_old|| = 0.00746885
+Nonlinear solver converged at step 3
+
+Solving time step: 4, time: 0.04
+Linear solver converged at step: 9, final residual: 0.000446204  Nonlinear convergence: ||u - u_old|| = 0.0352707
+Linear solver converged at step: 7, final residual: 0.000676817  Nonlinear convergence: ||u - u_old|| = 0.034075
+Linear solver converged at step: 3, final residual: 0.000688517  Nonlinear convergence: ||u - u_old|| = 0.0136205
+Linear solver converged at step: 3, final residual: 0.000534856  Nonlinear convergence: ||u - u_old|| = 0.00458789
+Nonlinear solver converged at step 3
+
+Solving time step: 5, time: 0.05
+Linear solver converged at step: 9, final residual: 0.00048939  Nonlinear convergence: ||u - u_old|| = 0.0293433
+Linear solver converged at step: 7, final residual: 0.000453601  Nonlinear convergence: ||u - u_old|| = 0.0250623
+Linear solver converged at step: 2, final residual: 0.000649925  Nonlinear convergence: ||u - u_old|| = 0.0106409
+Linear solver converged at step: 2, final residual: 0.000462201  Nonlinear convergence: ||u - u_old|| = 0.00321457
+Nonlinear solver converged at step 3
+
+Solving time step: 6, time: 0.06
+Linear solver converged at step: 9, final residual: 0.000512219  Nonlinear convergence: ||u - u_old|| = 0.0263805
+Linear solver converged at step: 6, final residual: 0.000492852  Nonlinear convergence: ||u - u_old|| = 0.0186717
+Linear solver converged at step: 2, final residual: 0.000661877  Nonlinear convergence: ||u - u_old|| = 0.00633521
+Nonlinear solver converged at step 2
+
+Solving time step: 7, time: 0.07
+Linear solver converged at step: 9, final residual: 0.000450628  Nonlinear convergence: ||u - u_old|| = 0.0226796
+Linear solver converged at step: 4, final residual: 0.000704647  Nonlinear convergence: ||u - u_old|| = 0.0166641
+Linear solver converged at step: 3, final residual: 0.000625365  Nonlinear convergence: ||u - u_old|| = 0.00598971
+Nonlinear solver converged at step 2
+
+Solving time step: 8, time: 0.08
+Linear solver converged at step: 9, final residual: 0.000453252  Nonlinear convergence: ||u - u_old|| = 0.0221573
+Linear solver converged at step: 3, final residual: 0.000686706  Nonlinear convergence: ||u - u_old|| = 0.0118707
+Linear solver converged at step: 2, final residual: 0.000677571  Nonlinear convergence: ||u - u_old|| = 0.00430801
+Nonlinear solver converged at step 2
+
+Solving time step: 9, time: 0.09
+Linear solver converged at step: 9, final residual: 0.000513238  Nonlinear convergence: ||u - u_old|| = 0.018795
+Linear solver converged at step: 4, final residual: 0.000523707  Nonlinear convergence: ||u - u_old|| = 0.010782
+Linear solver converged at step: 2, final residual: 0.000546911  Nonlinear convergence: ||u - u_old|| = 0.00400603
+Nonlinear solver converged at step 2
+
+Solving time step: 10, time: 0.1
+Linear solver converged at step: 9, final residual: 0.000431565  Nonlinear convergence: ||u - u_old|| = 0.0182549
+Linear solver converged at step: 3, final residual: 0.000633741  Nonlinear convergence: ||u - u_old|| = 0.00977269
+Nonlinear solver converged at step 1
+
+Solving time step: 11, time: 0.11
+Linear solver converged at step: 9, final residual: 0.000446194  Nonlinear convergence: ||u - u_old|| = 0.0171929
+Linear solver converged at step: 3, final residual: 0.000652476  Nonlinear convergence: ||u - u_old|| = 0.00793799
+Nonlinear solver converged at step 1
+
+Solving time step: 12, time: 0.12
+Linear solver converged at step: 8, final residual: 0.000598803  Nonlinear convergence: ||u - u_old|| = 0.0154387
+Linear solver converged at step: 4, final residual: 0.000582147  Nonlinear convergence: ||u - u_old|| = 0.00769237
+Nonlinear solver converged at step 1
+
+Solving time step: 13, time: 0.13
+Linear solver converged at step: 8, final residual: 0.000607949  Nonlinear convergence: ||u - u_old|| = 0.0152876
+Linear solver converged at step: 4, final residual: 0.000667771  Nonlinear convergence: ||u - u_old|| = 0.00738251
+Nonlinear solver converged at step 1
+
+Solving time step: 14, time: 0.14
+Linear solver converged at step: 7, final residual: 0.0006994  Nonlinear convergence: ||u - u_old|| = 0.0144556
+Linear solver converged at step: 5, final residual: 0.000534921  Nonlinear convergence: ||u - u_old|| = 0.00589552
+Nonlinear solver converged at step 1
+
+Solving time step: 15, time: 0.15
+Linear solver converged at step: 6, final residual: 0.00066121  Nonlinear convergence: ||u - u_old|| = 0.0126716
+Linear solver converged at step: 4, final residual: 0.000695236  Nonlinear convergence: ||u - u_old|| = 0.00515134
+Nonlinear solver converged at step 1
+
+Solving time step: 16, time: 0.16
+Linear solver converged at step: 5, final residual: 0.000716423  Nonlinear convergence: ||u - u_old|| = 0.0111685
+Linear solver converged at step: 5, final residual: 0.000549014  Nonlinear convergence: ||u - u_old|| = 0.00578658
+Nonlinear solver converged at step 1
+
+Solving time step: 17, time: 0.17
+Linear solver converged at step: 5, final residual: 0.000683489  Nonlinear convergence: ||u - u_old|| = 0.0127611
+Linear solver converged at step: 4, final residual: 0.00064314  Nonlinear convergence: ||u - u_old|| = 0.00519384
+Nonlinear solver converged at step 1
+
+Solving time step: 18, time: 0.18
+Linear solver converged at step: 5, final residual: 0.000671396  Nonlinear convergence: ||u - u_old|| = 0.0119409
+Linear solver converged at step: 4, final residual: 0.00066674  Nonlinear convergence: ||u - u_old|| = 0.00461608
+Nonlinear solver converged at step 1
+
+Solving time step: 19, time: 0.19
+Linear solver converged at step: 5, final residual: 0.000645159  Nonlinear convergence: ||u - u_old|| = 0.0110397
+Linear solver converged at step: 4, final residual: 0.000652724  Nonlinear convergence: ||u - u_old|| = 0.00398861
+Nonlinear solver converged at step 1
+
+Solving time step: 20, time: 0.2
+Linear solver converged at step: 5, final residual: 0.000611283  Nonlinear convergence: ||u - u_old|| = 0.0100051
+Linear solver converged at step: 4, final residual: 0.000615624  Nonlinear convergence: ||u - u_old|| = 0.0039199
+Nonlinear solver converged at step 1
+
+Solving time step: 21, time: 0.21
+Linear solver converged at step: 5, final residual: 0.000601745  Nonlinear convergence: ||u - u_old|| = 0.00943801
+Nonlinear solver converged at step 0
+
+Solving time step: 22, time: 0.22
+Linear solver converged at step: 5, final residual: 0.000631611  Nonlinear convergence: ||u - u_old|| = 0.0111567
+Linear solver converged at step: 4, final residual: 0.000660874  Nonlinear convergence: ||u - u_old|| = 0.00401856
+Nonlinear solver converged at step 1
+
+Solving time step: 23, time: 0.23
+Linear solver converged at step: 5, final residual: 0.000615199  Nonlinear convergence: ||u - u_old|| = 0.0101589
+Linear solver converged at step: 3, final residual: 0.000670788  Nonlinear convergence: ||u - u_old|| = 0.00335518
+Nonlinear solver converged at step 1
+
+Solving time step: 24, time: 0.24
+Linear solver converged at step: 5, final residual: 0.000653774  Nonlinear convergence: ||u - u_old|| = 0.00868018
+Nonlinear solver converged at step 0
+
+Solving time step: 25, time: 0.25
+Linear solver converged at step: 5, final residual: 0.000645677  Nonlinear convergence: ||u - u_old|| = 0.00968378
+Nonlinear solver converged at step 0
+
+Solving time step: 26, time: 0.26
+Linear solver converged at step: 5, final residual: 0.000660662  Nonlinear convergence: ||u - u_old|| = 0.00895228
+Nonlinear solver converged at step 0
+
+Solving time step: 27, time: 0.27
+Linear solver converged at step: 5, final residual: 0.000644678  Nonlinear convergence: ||u - u_old|| = 0.0101459
+Linear solver converged at step: 4, final residual: 0.00065334  Nonlinear convergence: ||u - u_old|| = 0.00362471
+Nonlinear solver converged at step 1
+
+Solving time step: 28, time: 0.28
+Linear solver converged at step: 5, final residual: 0.000624658  Nonlinear convergence: ||u - u_old|| = 0.00953009
+Nonlinear solver converged at step 0
+
+Solving time step: 29, time: 0.29
+Linear solver converged at step: 5, final residual: 0.000610779  Nonlinear convergence: ||u - u_old|| = 0.00960646
+Nonlinear solver converged at step 0
+
+Solving time step: 30, time: 0.3
+Linear solver converged at step: 5, final residual: 0.000640241  Nonlinear convergence: ||u - u_old|| = 0.00972873
+Nonlinear solver converged at step 0
+
+Solving time step: 31, time: 0.31
+Linear solver converged at step: 5, final residual: 0.000610167  Nonlinear convergence: ||u - u_old|| = 0.00851133
+Nonlinear solver converged at step 0
+
+Solving time step: 32, time: 0.32
+Linear solver converged at step: 5, final residual: 0.000672647  Nonlinear convergence: ||u - u_old|| = 0.0093309
+Nonlinear solver converged at step 0
+
+Solving time step: 33, time: 0.33
+Linear solver converged at step: 5, final residual: 0.000652472  Nonlinear convergence: ||u - u_old|| = 0.00882206
+Nonlinear solver converged at step 0
+
+Solving time step: 34, time: 0.34
+Linear solver converged at step: 5, final residual: 0.000715709  Nonlinear convergence: ||u - u_old|| = 0.00962206
+Nonlinear solver converged at step 0
+
+Solving time step: 35, time: 0.35
+Linear solver converged at step: 5, final residual: 0.000687875  Nonlinear convergence: ||u - u_old|| = 0.0095563
+Nonlinear solver converged at step 0
+
+Solving time step: 36, time: 0.36
+Linear solver converged at step: 6, final residual: 0.000447678  Nonlinear convergence: ||u - u_old|| = 0.00929851
+Nonlinear solver converged at step 0
+
+Solving time step: 37, time: 0.37
+Linear solver converged at step: 6, final residual: 0.000427338  Nonlinear convergence: ||u - u_old|| = 0.0081949
+Nonlinear solver converged at step 0
+
+Solving time step: 38, time: 0.38
+Linear solver converged at step: 6, final residual: 0.000422816  Nonlinear convergence: ||u - u_old|| = 0.00888905
+Nonlinear solver converged at step 0
+
+Solving time step: 39, time: 0.39
+Linear solver converged at step: 6, final residual: 0.000424509  Nonlinear convergence: ||u - u_old|| = 0.00772271
+Nonlinear solver converged at step 0
+
+Solving time step: 40, time: 0.4
+Linear solver converged at step: 6, final residual: 0.000424895  Nonlinear convergence: ||u - u_old|| = 0.00830378
+Nonlinear solver converged at step 0
+
+Solving time step: 41, time: 0.41
+Linear solver converged at step: 6, final residual: 0.000425987  Nonlinear convergence: ||u - u_old|| = 0.00886882
+Nonlinear solver converged at step 0
+
+Solving time step: 42, time: 0.42
+Linear solver converged at step: 6, final residual: 0.000424285  Nonlinear convergence: ||u - u_old|| = 0.00862882
+Nonlinear solver converged at step 0
+
+Solving time step: 43, time: 0.43
+Linear solver converged at step: 5, final residual: 0.000728583  Nonlinear convergence: ||u - u_old|| = 0.00845771
+Nonlinear solver converged at step 0
+
+Solving time step: 44, time: 0.44
+Linear solver converged at step: 5, final residual: 0.000708383  Nonlinear convergence: ||u - u_old|| = 0.0085225
+Nonlinear solver converged at step 0
+
+Solving time step: 45, time: 0.45
+Linear solver converged at step: 5, final residual: 0.000707941  Nonlinear convergence: ||u - u_old|| = 0.00748723
+Nonlinear solver converged at step 0
+
+Solving time step: 46, time: 0.46
+Linear solver converged at step: 5, final residual: 0.000702445  Nonlinear convergence: ||u - u_old|| = 0.0081188
+Nonlinear solver converged at step 0
+
+Solving time step: 47, time: 0.47
+Linear solver converged at step: 5, final residual: 0.000721883  Nonlinear convergence: ||u - u_old|| = 0.00741767
+Nonlinear solver converged at step 0
+
+Solving time step: 48, time: 0.48
+Linear solver converged at step: 5, final residual: 0.000721083  Nonlinear convergence: ||u - u_old|| = 0.00801825
+Nonlinear solver converged at step 0
+
+Solving time step: 49, time: 0.49
+Linear solver converged at step: 5, final residual: 0.00072944  Nonlinear convergence: ||u - u_old|| = 0.00830718
+Nonlinear solver converged at step 0
+
+Solving time step: 50, time: 0.5
+Linear solver converged at step: 5, final residual: 0.000719981  Nonlinear convergence: ||u - u_old|| = 0.00798578
+Nonlinear solver converged at step 0
+
+Solving time step: 51, time: 0.51
+Linear solver converged at step: 5, final residual: 0.000715286  Nonlinear convergence: ||u - u_old|| = 0.00812538
+Nonlinear solver converged at step 0
+
+Solving time step: 52, time: 0.52
+Linear solver converged at step: 5, final residual: 0.000705779  Nonlinear convergence: ||u - u_old|| = 0.00783346
+Nonlinear solver converged at step 0
+
+Solving time step: 53, time: 0.53
+Linear solver converged at step: 5, final residual: 0.000705576  Nonlinear convergence: ||u - u_old|| = 0.00771413
+Nonlinear solver converged at step 0
+
+Solving time step: 54, time: 0.54
+Linear solver converged at step: 5, final residual: 0.000706134  Nonlinear convergence: ||u - u_old|| = 0.0076006
+Nonlinear solver converged at step 0
+
+Solving time step: 55, time: 0.55
+Linear solver converged at step: 5, final residual: 0.000728548  Nonlinear convergence: ||u - u_old|| = 0.00763618
+Nonlinear solver converged at step 0
+
+Solving time step: 56, time: 0.56
+Linear solver converged at step: 6, final residual: 0.000436801  Nonlinear convergence: ||u - u_old|| = 0.0080766
+Nonlinear solver converged at step 0
+
+Solving time step: 57, time: 0.57
+Linear solver converged at step: 6, final residual: 0.000456772  Nonlinear convergence: ||u - u_old|| = 0.00801159
+Nonlinear solver converged at step 0
+
+Solving time step: 58, time: 0.58
+Linear solver converged at step: 6, final residual: 0.000478781  Nonlinear convergence: ||u - u_old|| = 0.00796163
+Nonlinear solver converged at step 0
+
+Solving time step: 59, time: 0.59
+Linear solver converged at step: 6, final residual: 0.000502093  Nonlinear convergence: ||u - u_old|| = 0.00797671
+Nonlinear solver converged at step 0
+
+Solving time step: 60, time: 0.6
+Linear solver converged at step: 6, final residual: 0.000531168  Nonlinear convergence: ||u - u_old|| = 0.00774733
+Nonlinear solver converged at step 0
+
+Solving time step: 61, time: 0.61
+Linear solver converged at step: 6, final residual: 0.000561251  Nonlinear convergence: ||u - u_old|| = 0.00777639
+Nonlinear solver converged at step 0
+
+Solving time step: 62, time: 0.62
+Linear solver converged at step: 6, final residual: 0.000585431  Nonlinear convergence: ||u - u_old|| = 0.00780285
+Nonlinear solver converged at step 0
+
+Solving time step: 63, time: 0.63
+Linear solver converged at step: 6, final residual: 0.000604193  Nonlinear convergence: ||u - u_old|| = 0.00783406
+Nonlinear solver converged at step 0
+
+Solving time step: 64, time: 0.64
+Linear solver converged at step: 6, final residual: 0.000614431  Nonlinear convergence: ||u - u_old|| = 0.00804164
+Nonlinear solver converged at step 0
+
+Solving time step: 65, time: 0.65
+Linear solver converged at step: 6, final residual: 0.000620527  Nonlinear convergence: ||u - u_old|| = 0.0080807
+Nonlinear solver converged at step 0
+
+Solving time step: 66, time: 0.66
+Linear solver converged at step: 6, final residual: 0.000629493  Nonlinear convergence: ||u - u_old|| = 0.00803782
+Nonlinear solver converged at step 0
+
+Solving time step: 67, time: 0.67
+Linear solver converged at step: 6, final residual: 0.000638021  Nonlinear convergence: ||u - u_old|| = 0.00796486
+Nonlinear solver converged at step 0
+
+Solving time step: 68, time: 0.68
+Linear solver converged at step: 6, final residual: 0.000641934  Nonlinear convergence: ||u - u_old|| = 0.00800333
+Nonlinear solver converged at step 0
+
+Solving time step: 69, time: 0.69
+Linear solver converged at step: 6, final residual: 0.000639209  Nonlinear convergence: ||u - u_old|| = 0.00803676
+Nonlinear solver converged at step 0
+
+Solving time step: 70, time: 0.7
+Linear solver converged at step: 6, final residual: 0.000629736  Nonlinear convergence: ||u - u_old|| = 0.00806644
+Nonlinear solver converged at step 0
+
+Solving time step: 71, time: 0.71
+Linear solver converged at step: 6, final residual: 0.000622659  Nonlinear convergence: ||u - u_old|| = 0.00809365
+Nonlinear solver converged at step 0
+
+Solving time step: 72, time: 0.72
+Linear solver converged at step: 6, final residual: 0.000619143  Nonlinear convergence: ||u - u_old|| = 0.00811787
+Nonlinear solver converged at step 0
+
+Solving time step: 73, time: 0.73
+Linear solver converged at step: 6, final residual: 0.00061867  Nonlinear convergence: ||u - u_old|| = 0.00814381
+Nonlinear solver converged at step 0
+
+Solving time step: 74, time: 0.74
+Linear solver converged at step: 6, final residual: 0.000615964  Nonlinear convergence: ||u - u_old|| = 0.00817247
+Nonlinear solver converged at step 0
+
+Solving time step: 75, time: 0.75
+Linear solver converged at step: 6, final residual: 0.000615569  Nonlinear convergence: ||u - u_old|| = 0.00819741
+Nonlinear solver converged at step 0
+
+Solving time step: 76, time: 0.76
+Linear solver converged at step: 6, final residual: 0.000623462  Nonlinear convergence: ||u - u_old|| = 0.00822512
+Nonlinear solver converged at step 0
+
+Solving time step: 77, time: 0.77
+Linear solver converged at step: 6, final residual: 0.000628318  Nonlinear convergence: ||u - u_old|| = 0.00826244
+Nonlinear solver converged at step 0
+
+Solving time step: 78, time: 0.78
+Linear solver converged at step: 6, final residual: 0.000633519  Nonlinear convergence: ||u - u_old|| = 0.00829976
+Nonlinear solver converged at step 0
+
+Solving time step: 79, time: 0.79
+Linear solver converged at step: 6, final residual: 0.000632112  Nonlinear convergence: ||u - u_old|| = 0.00833096
+Nonlinear solver converged at step 0
+
+Solving time step: 80, time: 0.8
+Linear solver converged at step: 6, final residual: 0.000627778  Nonlinear convergence: ||u - u_old|| = 0.00835862
+Nonlinear solver converged at step 0
+
+Solving time step: 81, time: 0.81
+Linear solver converged at step: 6, final residual: 0.00062507  Nonlinear convergence: ||u - u_old|| = 0.00838466
+Nonlinear solver converged at step 0
+
+Solving time step: 82, time: 0.82
+Linear solver converged at step: 6, final residual: 0.000624991  Nonlinear convergence: ||u - u_old|| = 0.00841226
+Nonlinear solver converged at step 0
+
+Solving time step: 83, time: 0.83
+Linear solver converged at step: 6, final residual: 0.000630771  Nonlinear convergence: ||u - u_old|| = 0.00844004
+Nonlinear solver converged at step 0
+
+Solving time step: 84, time: 0.84
+Linear solver converged at step: 6, final residual: 0.000642663  Nonlinear convergence: ||u - u_old|| = 0.00847319
+Nonlinear solver converged at step 0
+
+Solving time step: 85, time: 0.85
+Linear solver converged at step: 6, final residual: 0.000652623  Nonlinear convergence: ||u - u_old|| = 0.00850299
+Nonlinear solver converged at step 0
+
+Solving time step: 86, time: 0.86
+Linear solver converged at step: 6, final residual: 0.000659636  Nonlinear convergence: ||u - u_old|| = 0.00853537
+Nonlinear solver converged at step 0
+
+Solving time step: 87, time: 0.87
+Linear solver converged at step: 6, final residual: 0.000658726  Nonlinear convergence: ||u - u_old|| = 0.00856581
+Nonlinear solver converged at step 0
+
+Solving time step: 88, time: 0.88
+Linear solver converged at step: 6, final residual: 0.000658502  Nonlinear convergence: ||u - u_old|| = 0.00859419
+Nonlinear solver converged at step 0
+
+Solving time step: 89, time: 0.89
+Linear solver converged at step: 6, final residual: 0.000663491  Nonlinear convergence: ||u - u_old|| = 0.00862616
+Nonlinear solver converged at step 0
+
+Solving time step: 90, time: 0.9
+Linear solver converged at step: 6, final residual: 0.000665002  Nonlinear convergence: ||u - u_old|| = 0.00866042
+Nonlinear solver converged at step 0
+
+Solving time step: 91, time: 0.91
+Linear solver converged at step: 6, final residual: 0.000665042  Nonlinear convergence: ||u - u_old|| = 0.008692
+Nonlinear solver converged at step 0
+
+Solving time step: 92, time: 0.92
+Linear solver converged at step: 6, final residual: 0.000665709  Nonlinear convergence: ||u - u_old|| = 0.00872527
+Nonlinear solver converged at step 0
+
+Solving time step: 93, time: 0.93
+Linear solver converged at step: 6, final residual: 0.000673776  Nonlinear convergence: ||u - u_old|| = 0.00875614
+Nonlinear solver converged at step 0
+
+Solving time step: 94, time: 0.94
+Linear solver converged at step: 6, final residual: 0.00069074  Nonlinear convergence: ||u - u_old|| = 0.00879184
+Nonlinear solver converged at step 0
+
+Solving time step: 95, time: 0.95
+Linear solver converged at step: 6, final residual: 0.000708052  Nonlinear convergence: ||u - u_old|| = 0.0088345
+Nonlinear solver converged at step 0
+
+Solving time step: 96, time: 0.96
+Linear solver converged at step: 6, final residual: 0.000721601  Nonlinear convergence: ||u - u_old|| = 0.00885349
+Nonlinear solver converged at step 0
+
+Solving time step: 97, time: 0.97
+Linear solver converged at step: 6, final residual: 0.000736403  Nonlinear convergence: ||u - u_old|| = 0.00888816
+Nonlinear solver converged at step 0
+
+Solving time step: 98, time: 0.98
+Linear solver converged at step: 6, final residual: 0.000751404  Nonlinear convergence: ||u - u_old|| = 0.00892355
+Nonlinear solver converged at step 0
+
+Solving time step: 99, time: 0.99
+Linear solver converged at step: 6, final residual: 0.000769057  Nonlinear convergence: ||u - u_old|| = 0.00896614
+Nonlinear solver converged at step 0
+
+Solving time step: 100, time: 1
+Linear solver converged at step: 7, final residual: 0.000480001  Nonlinear convergence: ||u - u_old|| = 0.0089875
+Nonlinear solver converged at step 0

@@ -1,0 +1,33 @@
+
+strategy,
+	single_method #graphics
+
+method,
+	polynomial_chaos
+	  quadrature_order   = 3	
+	  dimension_preference = 5 5	
+	  samples = 10000		
+	  seed = 12347 rng rnum2	
+	  response_levels =		
+	  .1 1. 50. 100. 500. 1000.	
+	  variance_based_decomp #univariate_effects
+
+variables,
+ 	uniform_uncertain = 2			
+       	  lower_bounds      =  0.5  0.1 		
+ 	  upper_bounds      =  1.0  0.3		
+ 	  descriptors       = 'LAMBDA_P' 'LAMBDA_A'		
+
+interface,
+	system 
+	analysis_driver = '/home/lima/TS/euclid_setup_driver'
+	parameters_file = 'pce.in'
+	results_file = 'pce.out'
+        work_directory named = "realization"
+	file_tag   file_save directory_save 
+
+responses,
+	response_functions = 1
+	no_gradients
+	no_hessians
+
