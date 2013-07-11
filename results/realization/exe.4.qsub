@@ -1,0 +1,13 @@
+#!/bin/bash                           
+#  combine stdout stderr              
+#$ -j y                               
+#  jobname                            
+#$ -N gpc.4                        
+#  inherit submission env             
+#$ -V                                 
+# The job is located in the current   
+# working directory.                  
+#$ -cwd                               
+#$ -q all.q                           
+#$ -pe mpich 16                       
+/opt/apps/ossw/libraries/mpich2/mpich2-1.4.1p1/sl6/gcc-4.6/bin/mpiexec -np 16 ./example-opt -run_fem pce.in.4 -init_timestep 0 -output_freq 100 -n_timesteps 100 -ksp_type gmres -pc_type bjacobi -sub_pc_type ilu -sub_pc_factor_levels 4 
