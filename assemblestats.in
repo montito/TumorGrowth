@@ -1,0 +1,49 @@
+
+# see reference manual
+#   http://dakota.sandia.gov/licensing/stable/html-ref/index.html
+
+# run single method and output to a file
+#  http://dakota.sandia.gov/licensing/stable/html-ref/StratCommands.html
+strategy,
+	single_method 
+
+interface,
+	system 
+          asynchronous			#0,#p0
+          evaluation_concurrency 8 	#3,#8,#18,#19
+	  analysis_driver = 'echo'
+	  #analysis_driver = './ibrun_par_driver'
+	  # this will guarantee that evaluations are replaced with
+          # evaluations modulo the evaluation concurrency
+ 	  local_evaluation_static_scheduling
+	  parameters_file = 'testparam.in'
+	  results_file = 'saida.out'
+          work_directory named = "/workarea/fuentes/github/TumorGrowth/results/realization"
+	  file_tag     deactivate restart_file
+          allow_existing_results 
+	  file_save directory_save 
+          #allow_existing_results template_directory "/workarea/fuentes/github/TumorGrowth/results/realization"
+
+responses,
+	num_response_functions = 6
+	no_gradients
+	no_hessians
+
+method,
+	polynomial_chaos
+	  samples = 10000		
+	  seed = 12347 rng rnum2	
+          # vector response input 
+          # http://dakota.sandia.gov/licensing/stable/html-ref/IntroCommands.html#IntroCmdsInpSpec
+	  variance_based_decomp #univariate_effects
+	  #output verbose
+	  output silent
+	  response_levels =   .1e-2  .4e-2  .7e-2 .1e-2  .4e-2  .7e-2 .1e-2  .4e-2  .7e-2 .1e-2  .4e-2  .7e-2 .1e-2  .4e-2  .7e-2 .1e-2  .4e-2  .7e-2
+	  probability_levels =   0.050000  0.500000  0.950000  0.050000  0.500000  0.950000  0.050000  0.500000  0.950000  0.050000  0.500000  0.950000  0.050000  0.500000  0.950000  0.050000  0.500000  0.950000  
+	  quadrature_order   = 3	
+	  dimension_preference = 5 5	
+variables,
+ 	uniform_uncertain = 2			
+       	  lower_bounds      =  0.5  0.1 		
+ 	  upper_bounds      =  1.0  0.3		
+ 	  descriptors       = 'LAMBDA_P' 'LAMBDA_A'		
