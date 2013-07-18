@@ -1,0 +1,5 @@
+
+ - The qsub file runs dakota as the master process on a SINGLE processor
+ - the pce_run_gPC.in is the usual dakota input file except
+    - the 'analysis_driver' calls a bash script to run multiple mpi ranks per collocation point 
+ - CONCURRENCY * APPLIC_PROC = # of total proc
