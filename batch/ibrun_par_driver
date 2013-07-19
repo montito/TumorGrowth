@@ -1,0 +1,16 @@
+#!/bin/bash
+# simple wrapper 
+num=$(echo $1 | awk -F. '{print $NF}')
+# num of total processor should equal CONCURRENCY * APPLIC_PROCS
+CONCURRENCY=128
+# number of processors per application job
+APPLIC_PROCS=32
+
+# node offset
+RELATIVE_NODE=$(( (num - 1) % CONCURRENCY * APPLIC_PROCS ))
+
+#  redirect from /dev/null to save system file system
+ibrun -n $APPLIC_PROCS -o $RELATIVE_NODE ./example-opt -read_solution -init_timestep 770 -output_freq 5 -n_timesteps 230 -ksp_type gmres -p c_type bjacobi -sub_pc_type ilu -sub_pc_factor_levels 4 $1 $2 < /dev/null > $2.log
+echo 0.0 >  $2 
+
+
